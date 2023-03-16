@@ -1,0 +1,62 @@
+@use "../global" as *;
+.aboutrose-card{
+  background-color: $white;
+}
+.aboutrose-card__img{
+ position:relative;
+ width:100%;
+}
+.aboutrose-card__img{
+  min-width:rem(150);
+  min-height:rem(150);
+  aspect-ratio: 1/1;
+  @include mq("md") {
+    width:rem(300);
+    height:rem(300);
+    aspect-ratio: 1/1;
+  }
+}
+.aboutrose-card__img img{
+  aspect-ratio: 1/1;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 1/1;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }     
+}
+.aboutrose-card__content{
+  margin-top:rem(23);
+  max-width:rem(375);
+  @include mq("md") {
+    margin-top:rem(45);
+    max-width:rem(300);
+  }
+}
+.aboutrose-card__subtitle{
+  color:$sub-color;
+  font-family:$ja-font;
+  font-size:rem(24);
+  font-weight:$medium;
+  line-height:calc(32 / 24);
+  text-align: center;
+  @include mq("md") {
+    font-size:rem(36);
+    line-height:rem(57 / 36);
+  }
+}
+.aboutrose-card__text{
+  margin-top:rem(22);
+  font-family:$ja-font;
+  font-size:rem(14);
+  font-weight:$medium;
+  line-height:calc(22 / 14);
+  @include mq("md") {
+    margin-top:rem(44);
+    font-size:rem(16);
+    line-height:calc(26 / 16);
+  }
+}

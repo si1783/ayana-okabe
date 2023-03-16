@@ -1,0 +1,43 @@
+@use "../global" as *;
+.contact{
+  padding-top:rem(82);
+  @include mq("md") {
+    margin-top:rem(160);
+    margin-bottom:rem(180);
+    margin-left:rem(80);
+    margin-right:rem(80);
+    padding-top:rem(70);
+    background-color:$hover-color;
+  }
+}
+.contact-wrapper{
+  margin-top:rem(8);
+  @include mq("md") {
+    margin-top:rem(23);
+  }
+}
+.contact-guide{
+  width:rem(360);
+  padding-right:rem(10);
+  padding-left:rem(10);
+  padding-bottom:rem(25);
+  margin-right:auto;
+  margin-left:auto;
+  @include mq("md") {
+    width:initial;
+    padding-right:initial;
+    padding-left:initial;
+    text-align: center;
+  }
+}
+.contact-guide p{
+  font-family:$ja-font;
+  font-size:rem(14);
+  color:#502323;
+  font-weight:$medium;
+  line-height:calc(21 / 14);
+  @include mq("md") {
+    font-size:rem(18);
+    line-height:calc(26 / 18);
+  }
+}

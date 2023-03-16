@@ -1,0 +1,29 @@
+@use "../global" as *;
+.cafemenu__theme{
+  margin-top:rem(82);
+  margin-left:rem(9);
+  font-family:$second-base;
+  font-size:rem(18);
+  line-height:calc(22 / 18);
+  color:$sub-color;
+  text-transform: uppercase;
+  letter-spacing: rem(-2);
+  @include mq("md") {
+    margin-top:rem(158);
+    margin-left:rem(2);
+    letter-spacing: rem(-2);
+    font-size:rem(36);
+    line-height:calc(43 / 36);
+  }
+}
+.cafemenu__theme span{
+  margin-left:rem(10);
+}
+/*========= レイアウトのためのCSS ===============*/
+.cafemenu{
+  width:100%;
+  @include mq("md") {
+    padding-left:rem(80);
+    padding-right:rem(80);
+  }
+}

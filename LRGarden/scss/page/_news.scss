@@ -1,0 +1,53 @@
+@use "../global" as *;
+.news{
+  padding-top:rem(50);
+  @include mq("md") {
+    padding-top:rem(175);
+    padding-left:rem(80);
+    padding-right:rem(80);
+  }
+} 
+.news__theme{
+  margin:0 auto;
+  @include mq("md") {
+   display:flex;
+  }
+}
+.news__theme-pic-left{
+  @include mq("md") {
+    width:36%;
+    margin:0 auto 0 0;
+    aspect-ratio: 464/32.52;
+  }
+} 
+.news____theme-pic-left img{
+  @include mq("md") {
+    width:100%;
+  }
+}
+.news__theme-pic-right{
+  @include mq("md") {
+    width:36%;
+    margin:0 0 0 auto;
+    aspect-ratio: 464 / 32.52;
+  }
+}
+.news__theme-pic-right img{
+  @include mq("md") {
+    width:100%;
+  }
+}
+.news__theme-title{
+  @include mq("md") {
+  margin-top:rem(-25);
+  display:inline-block;
+  text-align: center;
+  align-items:center;
+  }
+}
+.news__wrapper{
+  padding-left:rem(20);
+  padding-right:rem(20);
+  margin:auto;
+  width:100%;
+}

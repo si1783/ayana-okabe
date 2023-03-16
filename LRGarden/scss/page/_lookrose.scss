@@ -1,0 +1,88 @@
+@use "../global" as *;
+.lookrose{
+  margin-top:rem(122);
+  padding-left:rem(38);
+  padding-right:rem(38);
+  @include mq("md") {
+    margin-top:rem(155);
+    padding-left:initial;
+    padding-right:initial;
+  }
+}
+.lookrose__title-main{
+  padding-left:rem(-5);
+  letter-spacing: rem(-8.0);
+}
+.lookrose__slider{
+  margin-top:rem(25);
+  align-items:center;
+  @include mq("md") {
+    margin-top:rem(82);
+    align-items:center;
+  }
+}
+.lookrose__slider li img {
+  width:100%;
+  /*スライダー内の画像を100%にしてレスポンシブ化*/
+  object-fit: cover;
+  height:100%;
+  @include mq("md") {
+    width:60vw;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+  } 
+}
+.lookrose__slider .slick-slide {
+  transform: scale(0);
+  /*左右の画像のサイズを80%に*/
+  @include mq("md") {
+    transform: scale(0.8);
+    /*左右の画像のサイズを80%に*/
+  }
+}
+.lookrose__slider .slick-slide.slick-center{
+  transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+  margin:rem(8) 0 0 0;
+  @include mq("md") {
+    margin:rem(20) 0 0 0;
+  }
+}
+
+.slick-dots li {
+  display:inline-block;
+  margin:0 rem(2);
+  @include mq("md") {
+    margin: 0 rem(4);
+  }
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width:rem(8);
+  /*ドットボタンのサイズ*/
+  height:rem(8);
+  /*ドットボタンのサイズ*/
+  display:block;
+  border-radius:50%;
+  border:rem(2) solid $line;
+  // background-color:$white;
+  /*ドットボタンの色*/
+  @include mq("md") {
+    width:rem(15);
+    height:rem(15);
+  }
+}
+
+.slick-dots .slick-active button{
+  background:$line;
+  /*ドットボタンの現在地表示の色*/
+}

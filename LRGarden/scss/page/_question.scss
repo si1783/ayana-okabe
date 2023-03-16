@@ -1,0 +1,138 @@
+@use "../global" as *;
+/*アコーディオン全体*/
+.question{
+  padding-top:rem(68);
+  padding-left:rem(10);
+  padding-right:rem(10);
+  @include mq("md") {
+    padding-top:rem(131);
+    padding-left:rem(80);
+    padding-right:rem(80);
+  }
+}
+.question__accordion-area{
+  list-style: none;
+  width:100%;
+  margin-top:rem(32);
+  @include mq("md") {
+    margin-top:rem(85);
+  }
+}
+.question__accordion-area li{
+  margin: rem(15.5) 0;
+  @include mq("md") {
+    margin: rem(80) 0;
+  }
+}
+.question__accordion-area-sec {
+  border: rem(2) solid $main-color;
+}
+.question__accordion-area-q{
+  position: relative;
+  /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-family:$ja-font;
+  font-size:rem(12);
+  color:$white;
+  line-height:calc(16 / 12);
+  font-weight: $medium;
+  padding-top:rem(5);
+  padding-left:rem(15);
+  padding-bottom:rem(8);
+  transition: all .3s ease-in-out;
+  background-color: $main-color;
+  @include mq("md") {
+    font-size:rem(24);
+    line-height:calc(32 / 24);
+    padding-top:rem(12);
+    padding-left:rem(32);
+    padding-bottom:rem(20);
+  }
+}
+.question__accordion-area-q::before,
+.question__accordion-area-q::after {
+  content: '';
+  width:rem(20);
+  height:rem(3);
+  background:$white;
+  position: absolute;
+  top: 45%;
+  right: 4%;
+  transform: translateY(-50%);
+  @include mq("md") {
+    width:rem(47);
+    height:rem(5);
+    top: 47%;
+    right: 3%;
+  }
+}
+.question__accordion-area-q::after {
+  transform: translateY(-50%) rotate(90deg);
+  transition: .3s ease-in-out;
+}
+/*closeというクラスがついたら＋のままA欄を展開*/
+.question__accordion-area-q.close::before{
+  transform: rotate(360deg);
+}
+.question__accordion-area-q.close::after{
+  transform: rotate(-270deg);
+}
+/*アコーディオンで現れるエリア*/
+.question__accordion-area-a{
+  // display: none;
+  /*はじめは非表示*/
+  font-family:$ja-font;
+  font-size:rem(12);
+  color:$main-color;
+  line-height:calc(16 / 12);
+  font-weight: $medium;
+  padding-top:rem(2);
+  padding-left:rem(15);
+  padding-bottom:rem(5.7);
+  background:$white;
+  @include mq("md") {
+    font-size:rem(24);
+    line-height:calc(32 / 24);
+    padding-top:rem(18);
+    padding-left:rem(35);
+    padding-bottom:rem(20);
+  }
+}
+.question__accordion-area-a-br{
+  padding-left: rem(40);
+  @include mq("md") {
+    padding-left:initial;
+  }
+}
+// Q&A
+.question__qa .Q,
+.question__qa .A{
+  position: relative;
+}
+.question__qa .Q::before {
+  content: 'Q';
+  font-size:rem(24);
+  font-family:$base-font;
+  line-height:calc(29 / 24);
+  padding-right:rem(18);
+  @include mq("md") {
+    font-size:rem(36);
+    font-family:$base-font;
+    line-height:calc(43 / 36);
+    padding-right:rem(30);
+  }
+}
+.question__qa .A::before {
+  content: 'A';
+  font-size:rem(24);
+  font-family:$base-font;
+  line-height:calc(29 / 24);
+  padding-right:rem(22);
+  @include mq("md") {
+    font-size:rem(36);
+    font-family:$base-font;
+    line-height:calc(43 / 36);
+    padding-right:rem(40);
+  }
+}
+

@@ -1,0 +1,110 @@
+@use "../global" as *;
+.aboutrose{ 
+  padding-top:rem(80);
+  @include mq("md") {
+    padding-top:rem(150);
+  }
+} 
+.aboutrose__head{
+  position:relative;
+  width:100%;
+}
+.aboutrose__head-right{
+  position:absolute;
+  width:100%;
+  height:rem(100);
+  background-size: cover;
+  background-position: center center;
+  @include mq("md") {
+    height:rem(630);
+  }
+}
+.aboutrose__head-right img{
+  width:100%;
+  height:100%;
+}
+.aboutrose__head-left{
+  position:absolute;
+  width:100%;
+  height:rem(100);
+  top:0;
+  left:0;
+  background-size: cover;
+  background-position: center center;
+  transform: rotate(180deg);
+  opacity: .7;
+  @include mq("md") {
+    height:rem(630);
+  }
+}
+.aboutrose__head-left img{
+  width:100%;
+  height:100%;
+}
+.aboutrose__theme{
+  position:absolute;
+  top:-45.0%;
+  left:53.0%;
+  transform: translate(-53.0%, 45.0%);
+  @include mq("md") {
+    position:absolute;
+    top:-92.0%;
+    left:50.0%;
+    transform: translate(-50.0%, 92.0%);
+  }
+}
+.aboutrose__wrapper{
+  margin:0 auto;
+  position:relative;
+}
+.aboutrose__introduction{
+  position:static;
+  padding-top:rem(120);
+  padding-left:rem(17.8);
+  padding-right:rem(16);
+  @include mq("md") {
+    padding-top:initial;
+    padding-left:initial;
+    padding-right:initial;
+    position:absolute;
+    top:20.5%;
+    left:50.0%;
+    transform: translate(-50.0%, -20.5%);
+  }
+}
+.aboutrose__introduction p{
+  font-family:$ja-font;
+  font-size:rem(14);
+  font-weight:$medium;
+  line-height:calc(23 / 14);
+  @include mq("md") {
+    font-size:rem(24);
+    line-height:calc(38 / 24);
+  }
+}
+.aboutrose__introduction p:nth-of-type(1){
+  padding-bottom:rem(20);
+  @include mq("md") {
+    margin-bottom:rem(20);
+    text-align: center;
+  }
+}
+.aboutrose__introduction p:nth-of-type(2){
+  padding-bottom:rem(20);
+  @include mq("md") {
+    margin-bottom:rem(20);
+    text-align: center;
+  }
+}
+.aboutrose__introduction p:nth-of-type(3){
+  padding-bottom:rem(20);
+  @include mq("md") {
+    margin-bottom:rem(20);
+    text-align: center;
+  }
+} 
+.aboutrose__introduction p:nth-of-type(4){
+  @include mq("md") {
+    text-align: center;
+  }
+} 

@@ -1,0 +1,77 @@
+@use "../global" as *;
+.header-nav{
+  width:100%;
+  height:100vh;
+  overflow-y: scroll;
+  background-color: $main-color;
+  @include mq("md") {
+    width:100%;
+    height:inherit;
+    overflow-y: initial;
+    background-color: initial;
+  }
+}
+.header-nav__items{
+  padding-left:rem(16);
+  height:inherit;
+  display:flex;
+  flex-direction:column;
+  justify-content:left;
+  margin-left:rem(186);
+  min-height:rem(375);
+  @include mq("md") {
+    width:inherit;
+    padding-left:rem(345);
+    padding-top:rem(16);
+    min-height:initial;
+    flex-direction: row;
+    justify-content:initial;
+  }
+}
+.hamburger-nav__list{
+  @include mq("md") {
+    text-align:center;
+  } 
+}
+.hamburger-nav__list a{
+  font-size:rem(24);
+  line-height:calc(32 / 24);
+  color: $white;
+  display:block;
+  margin-top:rem(16);
+  @include mq("md") {
+    display:flex;
+    align-items:center;
+    color:$sub-color;
+  }
+}
+.hamburger-nav__list:nth-of-type(2){
+  padding-top:rem(5);
+  @include mq("md") {
+    padding-top:initial;
+    padding-right:rem(18);
+  } 
+}
+.hamburger-nav__list:nth-of-type(3){
+  @include mq("md") {
+    padding-right:rem(20);
+  } 
+}
+.hamburger-nav__list:nth-of-type(4){
+  @include mq("md") {
+    padding-right:rem(8);
+  } 
+}
+.hamburger-nav__list:nth-child(5){
+  padding-top:rem(-10);
+  @include mq("md") {
+    padding-top:initial;
+    padding-right:rem(15);
+  } 
+}  
+.hamburger-nav__list a:hover{
+  @include mq("md") {
+    cursor: pointer;
+    color:$main-color;
+  } 
+}

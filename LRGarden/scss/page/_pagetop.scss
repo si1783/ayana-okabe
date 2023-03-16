@@ -1,0 +1,47 @@
+@use "../global" as *;
+#pagetop {
+  @include mq("md") {
+  position: fixed;
+  bottom:rem(545);
+  right:rem(80);
+  cursor:pointer;
+  }
+}
+#pagetop i {
+  @include mq("md") {
+  padding-top:rem(100);
+  // よくわからない
+  }
+}
+#pagetop a {
+  @include mq("md") {
+  display: block;
+  z-index: 999;
+  // padding: rem(20) rem(10) rem(20) rem(10);
+  border-radius: 30px;
+  width:rem(60);
+  height:rem(60);
+  background-color:$main-color;
+  text-decoration: none;
+  }
+}
+#pagetop a::after {
+  @include mq("md") {
+    position:absolute;
+    content:"";
+    border-style: solid;
+    border-width: 0 rem(15) rem(24) rem(15);
+    border-color: transparent transparent $white transparent;
+    display: inline-block;
+    top:rem(18);
+    left:rem(15);
+    width: 0;
+    height: 0;
+  }
+}
+#pagetop a:hover {
+  @include mq("md") {
+  text-decoration: none;
+  opacity: 0.7;
+  }
+}

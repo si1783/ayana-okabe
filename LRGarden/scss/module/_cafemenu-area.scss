@@ -1,0 +1,108 @@
+@use "../global" as *;
+/*エリアの表示非表示と形状*/
+.cafemenu-area .drinkmenu{
+  padding-top:rem(76);
+  padding-bottom:rem(41);
+  background-color:$main-color;
+  @include mq("md") {
+    padding-top:rem(72);
+    padding-bottom:rem(80);
+  }
+}
+.cafemenu-area .foodmenu,
+.cafemenu-area .dessertmenu{
+  padding-top:rem(76);
+  padding-bottom:rem(41);
+  background-color:$main-color;
+  @include mq("md") {
+    padding-top:rem(72);
+    padding-bottom:rem(80);
+  }
+}
+/*========= レイアウトのためのCSS ===============*/
+.drinkmenu .cafemenu-area__kind {
+  position:relative;
+  display:inline-block;
+  font-family:$ja-sub;
+  font-size:rem(28);
+  font-weight:$medium;
+  color:$white;
+  line-height:calc(42 / 28);
+  margin-bottom:rem(-1);
+  margin-left:rem(12);
+  @include mq("md") {
+    margin-left:rem(42);
+    font-size:rem(36);
+    line-height:calc(48 / 36);
+  }
+}
+.foodmenu .cafemenu-area__kind,
+.dessertmenu .cafemenu-area__kind{
+  position:relative;
+  display:inline-block;
+  font-family:$ja-sub;
+  font-size:rem(28);
+  font-weight:$medium;
+  color:$white;
+  line-height:calc(42 / 28);
+  margin-bottom:rem(-1);
+  margin-left:rem(20);
+  @include mq("md") {
+    margin-left:rem(42);
+    font-size:rem(36);
+    line-height:calc(48 / 36);
+  }
+}
+.drinkmenu .cafemenu-area__details{
+  margin-top:rem(28);
+  padding-left:rem(20);
+  padding-right:rem(20);
+  @include mq("md") {
+    margin-top:rem(71);
+    padding-left:rem(50);
+  }
+}
+.foodmenu .cafemenu-area__details,
+.dessertmenu .cafemenu-area__details{
+  margin-top:rem(45);
+  padding-left:rem(20);
+  padding-right:rem(20);
+  @include mq("md") {
+    margin-top:rem(71);
+    padding-left:rem(50);
+  }
+}
+.cafemenu-area__kind::before{
+  content: '';
+  position: absolute;
+  left:52.0%;
+  bottom:rem(-5);/*線の上下位置*/
+  display: inline-block;
+  width: rem(215);
+  height:rem(5);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);/*位置調整*/
+  background-color:$white;
+  @include mq("md") {
+    width: rem(270);
+    height:rem(10);
+    left: 48.0%;
+    bottom:rem(-10);
+  }
+}
+.cafemenu-area__details li{
+  font-family:$ja-font;
+  font-size:rem(24);
+  font-weight:$medium;
+  color:$white;
+  line-height:calc(32 / 28);
+  border-bottom:rem(1) solid $white;
+  padding-top:rem(17.5); 
+  padding-bottom:rem(17.5);
+  @include mq("md") {
+    font-size:rem(36);
+    line-height:calc(48 / 36);
+    padding-top:rem(16); 
+    padding-bottom:rem(16);
+  }
+}

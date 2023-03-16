@@ -1,0 +1,20 @@
+@use "../global" as *;
+.btn-wrapper{
+  text-align:center;
+  align-items: center;
+}
+.btn{
+  max-width:rem(202);
+  width:100%;
+  display:inline-block;
+  text-align:center;
+  font-family:$ja-font;
+  font-size:rem(18);
+  line-height:calc(24 / 18);
+  color:$hover-color;
+  text-decoration: none;
+  background-color:$main-color;
+  padding: rem(13);
+  border:rem(1) solid $line;
+  border-radius: rem(10);
+}

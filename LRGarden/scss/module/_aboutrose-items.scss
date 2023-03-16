@@ -1,0 +1,50 @@
+@use "../global" as *;
+.aboutrose-items{
+  position:static;
+  padding-top:rem(45);
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  @include mq(md){
+    padding-top:rem(710);
+    max-width:initial;
+  } 
+}
+.aboutrose-items__item{
+  max-width:calc(50% - rem(58)* 1 / 2);
+  width:100%;
+  @include mq(md){
+    max-width:calc(33.333% - rem(182) * 2 / 3);
+    width:100%;
+  }
+}
+.aboutrose-items__item + .aboutrose-items__item{
+  margin-left:rem(58);
+  @include mq(md){
+    margin-left:rem(182);
+  }
+}
+.aboutrose-items__item:nth-of-type(2n+1){
+  margin-left:0;
+  @include mq(md){
+    margin-top:rem(182);
+  } 
+}
+.aboutrose-items__item:nth-of-type(n+1){
+  @include mq(md){
+    margin-top:initial;
+  }
+}
+.aboutrose-items__item:nth-of-type(n+3){
+  margin-top:rem(38);
+  @include mq(md){
+    margin-top:initial;
+    margin-left:rem(182);
+  } 
+}
+.aboutrose-items__item:nth-of-type(n+4){
+  @include mq(md){
+    margin-top:rem(182);
+    margin-left:0;
+  } 
+}

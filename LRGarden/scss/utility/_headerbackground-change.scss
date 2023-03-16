@@ -1,0 +1,7 @@
+@use "../global" as *;
+.headerbackground-change{
+  background-color:$hover-color;
+  @include mq("md") {
+  background-color:rgba(246,241,232,0.95);
+  }
+}

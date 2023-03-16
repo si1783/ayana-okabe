@@ -1,0 +1,32 @@
+@use "../global" as *;
+.title{
+  text-align: center;
+}  
+.title-main{
+  display:inline-block;
+  font-family: $second-base;
+  color:$sub-color;
+  font-size:rem(24);
+  line-height:calc(25 / 24);
+  font-weight:$regular;
+  border-bottom:rem(4.8) solid $main-color;
+  text-align: center;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size:rem(36);
+    line-height:calc(48 / 36);
+    border-bottom:rem(8) solid $main-color;
+  }
+}
+.title-sub{
+  font-family:$ja-font;
+  font-size:rem(14);
+  font-weight:$medium;
+  line-height:calc(19 / 14);
+  color:$font-color;
+  text-align:center;
+  @include mq("md") {
+    font-size:rem(16);
+    line-height:calc(21 / 16);
+  }
+}

@@ -1,0 +1,51 @@
+@use "../global" as *;
+/*cafemenutabの形状*/
+.cafemenu-tab{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:rem(25);
+  @include mq("md") {
+    margin-top:rem(40);
+  }
+}
+.cafemenu-tab li{
+  display: table;
+  background:$white;  
+  width: calc(100%/3);
+  text-align: center;
+  transition: all 0.3s ease ease-in-out;
+}
+/*========= レイアウトのためのCSS ===============*/
+.cafemenu-tab{
+  list-style:none;
+}
+.cafemenu-tab li{
+  list-style:none;
+}
+.cafemenu-tab li a.selected{
+  background-color:$main-color;
+}
+.cafemenu-tab a{
+  display:block;
+  padding-top:rem(25);
+  padding-bottom:rem(20);
+  color:$sub-color;
+  text-decoration: none;
+  font-family:$second-base;
+  font-size:rem(24);
+  line-height:calc(34 / 24);
+  text-transform: uppercase;
+  border: rem(1) solid $main-color;
+  @include mq("md") {
+    padding-top:rem(15);
+    font-size:rem(36);
+    line-height:calc(43 / 36);
+  }
+}
+.cafemenu-tab a span{
+  letter-spacing:rem(-8.0);
+}
+.cafemenu-tab li a:hover{
+  opacity: 0.7s;
+}
+
